@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
     res.send('Hello Movies!')
 });
 
-app.use('/movies', movieRouter);
+app.use('/api/movies', movieRouter);
 
 app.use(notFoundMiddleware);
 app.use(errorsHandlerMiddleware);
