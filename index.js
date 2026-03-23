@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 
+const movieRouter = require('./routers/movieRouter');
 const errorsHandlerMiddleware = require('./middlewares/errorsHandler');
 const notFoundMiddleware = require('./middlewares/notFound');
 
@@ -11,6 +12,8 @@ app.use(express.json());
 app.get('/', (req, res) => {
     res.send('Hello Movies!')
 });
+
+app.use('/movies', movieRouter);
 
 app.use(notFoundMiddleware);
 app.use(errorsHandlerMiddleware);
