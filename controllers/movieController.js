@@ -82,7 +82,7 @@ const storeReview = (req, res) => {
 			})
 		}
 
-		res.status(201).json({ message: "Review added", success: true, id: res.insertId });
+		res.status(201).json({ message: "Review added", success: true, id: result.insertId });
 
 	})
 }
