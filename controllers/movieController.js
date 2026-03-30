@@ -72,7 +72,7 @@ const storeReview = (req, res) => {
 
 	const sqlQuery = 'INSERT INTO reviews (text,name,vote,movie_id) VALUES (?,?,?,?)';
 
-	db.query(sqlQuery, [text, name, vote, id], (err, res) => {
+	db.query(sqlQuery, [text, name, vote, id], (err, result) => {
 
 		if (err) {
 			console.error('DB QUERY FAILED', err);
